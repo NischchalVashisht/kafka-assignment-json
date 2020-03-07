@@ -1,0 +1,21 @@
+[
+  {
+    "id":1,
+    "name":"Nischal",
+    "age":22,
+    "address":"Delhi"
+  },
+  {
+    "id":2,
+    "name":"Suraj",
+    "age":23,
+    "address":"faridabad"
+  },
+  {
+    "id":3,
+    "name":"Abhinav",
+    "age":21,
+    "address":"agra"
+
+  }
+]
