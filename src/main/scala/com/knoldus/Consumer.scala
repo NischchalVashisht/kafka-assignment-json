@@ -11,7 +11,7 @@ object Consumer extends App {
 
   import java.util.Properties
 
-  implicit val formats = DefaultFormats
+  implicit val formats:DefaultFormats.type = DefaultFormats
   val TOPIC = "test5"
 
   val props = new Properties()
