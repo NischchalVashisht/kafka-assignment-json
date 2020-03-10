@@ -12,9 +12,7 @@ object ReadJson extends App {
    val source=Source.fromFile("/home/knoldus/Downloads/kafka-assignment/src/main/resources/Student.json")
    val json = source.getLines().mkString
    source.close()
-   val parsedJson = net.liftweb.json.parse(json)
-   val listOFStudent = parsedJson.children.map(list => list.extract[Student])
-   listOFStudent
+  json
  }
 
  def writeToFile(listOfStudent:String):Unit ={
