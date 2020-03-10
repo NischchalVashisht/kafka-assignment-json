@@ -14,10 +14,11 @@ object Producer extends App {
 
   val producer = new KafkaProducer[String,String](props)
 
-  val TOPIC = "test5"
+  val TOPIC = "test7"
 
 
-  val record = new ProducerRecord(TOPIC,"key","the end " + ReadJson.getProduceData())
+  val record = new ProducerRecord(TOPIC,"key","" + ReadJson.getProduceData)
+  println(record)
   producer.send(record)
   producer.close()
 
