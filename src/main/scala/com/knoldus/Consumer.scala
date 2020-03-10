@@ -10,9 +10,10 @@ import scala.collection.JavaConverters._
 object Consumer extends App {
 
   import java.util.Properties
+  import net.liftweb.json.Serialization.write
 
   implicit val formats:DefaultFormats.type = DefaultFormats
-  val TOPIC = "test5"
+  val TOPIC = "test7"
 
   val props = new Properties()
   props.put("bootstrap.servers","localhost:9092")
@@ -28,7 +29,7 @@ object Consumer extends App {
   while (true) {
     val records = consumer.poll(100)
     for (record <- records.asScala) {
-      println(record.value())
+      println(write(net.liftweb.json.parse(record.value()).children.map(list => list.extract[Student])))
     }
   }
 }
